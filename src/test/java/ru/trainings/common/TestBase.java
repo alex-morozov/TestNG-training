@@ -11,12 +11,12 @@ public class TestBase {
 	public static WebDriver driver = new FirefoxDriver();
 	public static String baseURL = "http://www.musicforums.ru/";
 		
-	@BeforeTest
+	@BeforeTest (alwaysRun = true)
 	  public void init (){
 	  driver.get(baseURL);
 	  }
 	
-	@AfterTest
+	@AfterTest (alwaysRun = true)
 	public void stop (){
 		driver.quit();
 	}

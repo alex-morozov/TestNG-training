@@ -11,7 +11,7 @@ import ru.trainings.common.TestBase;
 
 public class TestClass extends TestBase{	 
 		 	  
-	@Test
+	@Test ( groups = ("positive"))
 	public static void LoginOK (){
 		    TestBase.driver.findElement(By.linkText("Войти")).click();
 		    TestBase.driver.findElement(By.name("loginuser")).clear();
@@ -21,7 +21,7 @@ public class TestClass extends TestBase{
 		    TestBase.driver.findElement(By.name("btnlogin")).click();		   
 	}
 	
-	@Test
+	@Test ( groups = ("negative"))
 	public static void LoginWrong (){
 		    TestBase.driver.findElement(By.linkText("Войти")).click();
 		    TestBase.driver.findElement(By.name("loginuser")).clear();
@@ -31,9 +31,9 @@ public class TestClass extends TestBase{
 		    TestBase.driver.findElement(By.name("btnlogin")).click();		   
 	}
 	
-	@Test
+	@Test ( groups = ("positive"))
 	public static void showButton (){
-		driver.findElement(By.linkText("бас-гитары")).click();
+		TestBase.driver.findElement(By.linkText("бас-гитары")).click();
 		TestBase.driver.findElement(By.cssSelector("input[type=\"button\"]"));		
 	}
 	
