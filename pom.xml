@@ -45,9 +45,9 @@
   			<artifactId>maven-surefire-plugin</artifactId>
   			<version>2.18.1</version>
   			<configuration>
-   	          <suiteXMLFiles>
-      	       <suiteXmlFile>  /start_tests.xml </suiteXmlFile>
-      	     </suiteXMLFiles>
+   	          <suiteXmlFiles>
+      	       <suiteXmlFile>src/test/resources/start_tests.xml </suiteXmlFile>
+      	     </suiteXmlFiles>
       	    </configuration>
   		</plugin>
   	</plugins>

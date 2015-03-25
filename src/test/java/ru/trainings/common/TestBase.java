@@ -1,5 +1,7 @@
 package ru.trainings.common;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
@@ -15,6 +17,7 @@ public class TestBase {
 	@BeforeTest (alwaysRun = true)
 	  public void init (){
 	  driver.get(baseURL);
+	  driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	  }
 	
 	@AfterTest (alwaysRun = true)
